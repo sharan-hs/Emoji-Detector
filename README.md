@@ -1,2 +1,2 @@
 # Emoji-Detector
-Created with CodeSandbox
+An app to detect and describe the emojis
