@@ -4,13 +4,126 @@ import "./styles.css";
 var color = "aqua";
 
 const emojiDictionary = {
-  "🙂": "Smiling",
-  "😉": "Wink",
-  "😢": "Cry",
-  "😎": "cool"
+  "🐵": "Monkey face",
+  "🐒": "Monkey",
+  "🦍": "Gorilla",
+  "🦧": "Orangutan",
+  "🐶": "Dog face",
+  "🐕": "Dog",
+  "🦮": "Guide dog",
+  "🐕‍🦺": "Service dog",
+  "🐩": "Poodle",
+  "🐺": "Wolf",
+  "🦊": "Fox",
+  "🦝": "Racoon",
+  "🐱": "Cat face",
+  "🐈": "Cat",
+  "🐈‍⬛": "Black Cat",
+  "🦁": "Lion",
+  "🐯": "Tiger face",
+  "🐅": "Tiger",
+  "🐆": "Leopard",
+  "🐴": "Horse face",
+  "🐎": "Horse",
+  "🦄": "Unicorn",
+  "🦓": "Zebra",
+  "🦌": "Deer",
+  "🦬": "Bison",
+  "🐮": "Cow face",
+  "🐄": "Cow",
+  "🐂": "Ox",
+  "🐃": "Water buffalo",
+  "🐷": "Pig face",
+  "🐖": "Pig",
+  "🐗": "Boar",
+  "🐽": "Pig nose",
+  "🐏": "Ram",
+  "🐑": "Ewe",
+  "🐐": "Goat",
+  "🐪": "Camel",
+  "🐫": "Two hump camel",
+  "🦙": "Llama",
+  "🦒": "Giraffe",
+  "🐘": "Elephant",
+  "🦣": "Mammoth",
+  "🦏": "Rhinoceros",
+  "🦛": "Hippopotamus",
+  "🐭": "Mouse face",
+  "🐁": "Mouse",
+  "🐀": "Rat",
+  "🐹": "Hamster",
+  "🐰": "Rabbit face",
+  "🐇": "Rabbit",
+  "🐿": "Chipmunk",
+  "🦫": "Beaver",
+  "🦔": "Hedgehog",
+  "🦇": "Bat",
+  "🐻": "Bear",
+  "🐻‍❄️": "Polar bear",
+  "🐨": "Koala",
+  "🐼": "Panda",
+  "🦥": "Sloth",
+  "🦦": "Otter",
+  "🦨": "Skunk",
+  "🦘": "Kangaroo",
+  "🦡": "Badger",
+  "🐾": "Paw prints",
+  "🦃": "Turkey",
+  "🐔": "Chicken",
+  "🐓": "Rooster",
+  "🐣": "Hatching",
+  "🐤": "Baby chick",
+  "🐥": "Front-facing chick",
+  "🐦": "Bird",
+  "🐦‍⬛": "Black bird",
+  "🐧": "Penguin",
+  "🕊": "Dove",
+  "🦅": "Eagle",
+  "🦆": "Duck",
+  "🦢": "Swan",
+  "🦉": "Owl",
+  "🦤": "Dodo",
+  "🪶": "Feather",
+  "🦩": "Flamingo",
+  "🦜": "Peacock",
+  "🐸": "Frog",
+  "🐊": "Crocodile",
+  "🐢": "Turtle",
+  "🦎": "Lizard",
+  "🐍": "Snake",
+  "🐲": "Dragon face",
+  "🐉": "Dragon",
+  "🦕": "Sauropod",
+  "🦖": "Tyrannosaurus",
+  "🐳": "Spouting whale",
+  "🐋": "Whale",
+  "🐬": "Dolphin",
+  "🦭": "Seal",
+  "🐟": "Fish",
+  "🐠": "Tropical fish",
+  "🐡": "Blowfish",
+  "🦈": "Shark",
+  "🐙": "Octopus",
+  "🐚": "Spiral shell",
+  "🐌": "Snail",
+  "🦋": "Butterfly",
+  "🐛": "Bug",
+  "🐜": "Ant",
+  "🐝": "Honeybee",
+  "🪲": "Beetle",
+  "🐞": "Lady Beetle",
+  "🦗": "Cricket",
+  "🪳": "Cockroach",
+  "🕷": "Spider",
+  "🕸": "Spider web",
+  "🦂": "Scorpion",
+  "🦟": "Mosquito",
+  "🪰": "Fly",
+  "🪱": "Worm",
+  "🦠": "Microbe",
 };
 
-var emojisInAPP = Object.keys(emojiDictionary);
+var emojisInApp = Object.keys(emojiDictionary);
 
 export default function App() {
   const [description, setDescription] = useState("");
@@ -32,24 +145,29 @@ export default function App() {
   return (
     <div className="App">
       <h1 style={{ backgroundColor: color }}>
-        Emoji Detector{" "}
+        Animal Emoji Detector{" "}
         <span role="img" aria-label="Detective">
           👀 🔍
         </span>
       </h1>
 
       <input onChange={emojiInputHandler}></input>
-      <div>{description}</div>
+      <div
+        style={{ fontSize: "2.5rem", fontWeight: "bold", color: "darkblue" }}
+      >
+        {description}
+      </div>
       <h3>Emojis present in this app </h3>
-      {emojisInAPP.map(function (emoji) {
+      {emojisInApp.map(function (emoji) {
         return (
           <span
             onClick={() => emojiClickHandler(emoji)}
             style={{
               fontSize: "2rem",
+              fontWeight: "bolder",
               padding: "1rem",
               margin: "1rem",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
             key={emoji}
           >
